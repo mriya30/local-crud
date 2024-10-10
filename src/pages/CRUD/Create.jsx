@@ -56,7 +56,7 @@ const Create = () => {
                             },
                             maxLength: {
                                 value: 15,
-                                message: "maximum 15 character"
+                                message: "maximum 20 character"
                             },
                             pattern: {
                                 value: /[A-Za-z]{3}/,
@@ -80,7 +80,7 @@ const Create = () => {
                     <p className="text-danger">{errors?.email?.message}</p>
                 </div>
                 <div className="mt-4">
-                    <textarea type="address" {...register('address', {
+                    <input type="number" {...register('mobile', {
                         required: {
                             value: true,
                             message: "enter mobile number "
@@ -88,6 +88,21 @@ const Create = () => {
                         maxLength: {
                             value: 10,
                             message: "maximum 10 number"
+                        },
+                    }
+                    )}
+                        className="form-control" placeholder="enter your Mobile Number" />
+                    <p className="text-danger">{errors?.mobile?.message}</p>
+                </div>
+                <div className="mt-4">
+                    <textarea type="address" {...register('address', {
+                        required: {
+                            value: true,
+                            message: "enter your address "
+                        },
+                        maxLength: {
+                            value: 10,
+                            message: "maximum 20 char"
                         },
                     }
                     )}
