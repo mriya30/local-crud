@@ -74,7 +74,7 @@ const View = () => {
                     </div>
                     <div className="col-lg-4 my-4">
                         <select className='form-select' onChange={(e) => { setSorted(e.target.value) }}>
-                            <option value="">--select sorting--</option>
+                            <option value="" disabled>--select sorting--</option>
                             <option value="asc">A-Z</option>
                             <option value="desc">Z-A</option>
                         </select>
