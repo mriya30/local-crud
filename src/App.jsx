@@ -16,6 +16,9 @@ import View from './pages/CRUD/View'
 import SingleUser from './pages/CRUD/SingleUser'
 import Update from './pages/CRUD/Update'
 import ValidationForm from './pages/ValidationForm'
+import Counter from './pages/redux/Counter'
+import CreateRedux from './pages/reduxToolkit/CRUD/CreateRedux'
+import ViewRedux from './pages/reduxToolkit/CRUD/ViewRedux'
 
 
 const App = () => {
@@ -28,8 +31,8 @@ const App = () => {
       {/* <ValidForm/> */}
       {/* <LocalStorage/> */}
       {/* <LocalData/> */}
-      <ValidationForm/>
-      {/* <Routers>
+      {/* <ValidationForm/> */}
+      <Routers>
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>} />
@@ -41,9 +44,12 @@ const App = () => {
           <Route path='/View' element={<View/>} />
           <Route path='/SingleUser/:userId' element={<SingleUser/>} />
           <Route path='/Update/:id' element={<Update/>} />
+          <Route path='/Counter' element={<Counter/>} />
+          <Route path='/CreateRedux' element={<CreateRedux/>} />
+          <Route path='/ViewRedux' element={<ViewRedux/>} />
         </Routes>
         <Footer />
-      </Routers> */}
+      </Routers>
     </>
   )
 }

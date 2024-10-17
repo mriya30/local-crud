@@ -24,6 +24,15 @@ const Header = () => {
         <li className="nav-item ps-3">
           <NavLink className="nav-link text-white" to="/View">View</NavLink>
         </li>
+        <li className="nav-item ps-3">
+          <NavLink className="nav-link text-white" to="/Counter">Counter</NavLink>
+        </li>
+        <li className="nav-item ps-3">
+          <NavLink className="nav-link text-white" to="/CreateRedux">CreateRedux</NavLink>
+        </li>
+        <li className="nav-item ps-3">
+          <NavLink className="nav-link text-white" to="/ViewRedux">ViewRedux</NavLink>
+        </li>
         </ul>
     </div>
   </div>
