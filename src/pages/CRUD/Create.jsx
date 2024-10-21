@@ -10,16 +10,16 @@ const Create = () => {
         // console.log(data);
     }
     async function show() {
-        const res1 = await fetch('https://66fe258469936930895735f1.mockapi.io/users');
-        const data = await res1.json()
-        console.log(data.users)
+    //     const res1 = await fetch('https://66fe258469936930895735f1.mockapi.io/users');
+    //     const data = await res1.json()
+    //     console.log(data.users)
     
-    const res2 = await axios.get('https://66fe258469936930895735f1.mockapi.io/users');
-    console.log(res2)
-    console.log(res2.data)
-    console.log(res2.data.users)
+    // const res2 = await axios.get('https://66fe258469936930895735f1.mockapi.io/users');
+    // console.log(res2)
+    // console.log(res2.data)
+    // console.log(res2.data.users)
 
-    const res3=await axios.get('https://66fe258469936930895735f1.mockapi.io/users');
+    const res3=await axios.get('http://localhost:3000/users');
     console.log(res3.data.users);
 }
     useEffect(() => {
@@ -27,7 +27,7 @@ const Create = () => {
     }, [])
 
     async function Regist(data) {
-        const res=await axios.post('https://66fe258469936930895735f1.mockapi.io/users',data)
+        const res=await axios.post('http://localhost:3000/users',data)
 
         if(res){
             alert('data has been inserted')

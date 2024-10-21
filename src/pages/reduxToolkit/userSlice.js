@@ -28,8 +28,19 @@ const userSlice = createSlice( {
                 return user.id!=id
             })
             state.userlist=newUser
+        },
+        editUser:(state,action)=>{
+            console.log(action)
+            const {id}=action.payload
+
+            const index=state.userlist.findIndex((user)=>{
+                return user.id==id
+            })
+            if(index!=-1){
+                state.userlist[index]=action.payload
+            }
         }
     }
 })
-export const {addUser}=userSlice.actions
+export const {addUser,deleteUser,editUser}=userSlice.actions
 export default userSlice.reducer
